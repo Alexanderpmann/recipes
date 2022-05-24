@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+    <div class="container bg-secondary text-white p-4 shadow-lg">
+        <a class="btn btn-danger text-light border border-dark shadow float-end mt-4 mx-3" href="/logout">Logout</a>
+        <a class="btn btn-warning border border-dark text-dark mt-4 float-end shadow" href="/dashboard">Dashboard</a>
+        <h1 class="border border-dark bg-secondary text-warning p-3 shadow-lg">Showing Recipe Info for No. {{ recipe.id }}!</h1>
+    <div class="container text-dark bg-light shadow-lg border border-dark p-4 mt-3">
+        <h3>Name: {{ recipe.name }}</h3>
+        <h3>Description: {{ recipe.description }}</h3>
+        <h3>Instructions: {{ recipe.instructions }}</h3>
+        <h3>Date Made On: {{ recipe.date_made_on }}</h3>
+        <h3>Under 30 Minutes?: {{ recipe.under_30_minutes }}</h3>
+        <h3>User: {{ recipe.user.first_name }}</h3>
+    </div>
+</div>
+</body>
+</html>
